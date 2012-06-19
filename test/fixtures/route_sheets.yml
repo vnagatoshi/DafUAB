@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  out_date: 2012-06-14 16:27:17
+  origin: MyString
+  sender: MyString
+  page_number: 1
+  reference: MyString
+
+two:
+  out_date: 2012-06-14 16:27:17
+  origin: MyString
+  sender: MyString
+  page_number: 1
+  reference: MyString
