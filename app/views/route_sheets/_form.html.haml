@@ -1,0 +1,24 @@
+= semantic_form_for(@route_sheet) do |f|
+  - if @route_sheet.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@route_sheet.errors.count, "error")
+        prohibited this route_sheet from being saved:
+
+      %ul
+        - @route_sheet.errors.full_messages.each do |msg|
+          %li
+            = msg
+
+  = f.inputs :name => "Datos Generales" do
+    = f.input :out_date
+    = f.input :origin
+    = f.input :sender
+    = f.input :page_number
+    = f.input :reference
+
+  = f.semantic_fields_for :destination do |d|
+    = d.inputs :name => "Destinatario" do
+      = d.input :department_id, :for => :departments
+
+  = f.actions
