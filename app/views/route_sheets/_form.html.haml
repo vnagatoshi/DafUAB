@@ -11,14 +11,16 @@
             = msg
 
   = f.inputs :name => "Datos Generales" do
-    = f.input :out_date
-    = f.input :origin
-    = f.input :sender
-    = f.input :page_number
-    = f.input :reference
+    = f.input :out_date, :label => "Fecha de Ingreso :", :order => [:day, :month, :year], :include_blank => false
+    = f.input :origin ,:label => "Origen :", :value => "introducir texto"
+    = f.input :sender ,:label => "Remitente :"
+    = f.input :page_number, :label => "Número de Pag :"
+    = f.input :reference, :label => "Referencia :"
 
-  = f.semantic_fields_for :destination do |d|
+
+  = f.semantic_fields_for :destinations do |d|
     = d.inputs :name => "Destinatario" do
-      = d.input :department_id, :for => :departments
+      = d.input :department, :as => :radio
+      = d.input :observation
 
   = f.actions

@@ -1,4 +1,8 @@
 Daf::Application.routes.draw do
+  get "destination/index"
+
+  get "destination/new"
+
   resources :route_sheets
 
   ActiveAdmin.routes(self)
