@@ -1,0 +1,55 @@
+#Swrapper
+  #menu
+    %ul
+      %li.current_page_item
+        = link_to 'Cont', ""
+      %li
+        = link_to 'Contact', ""
+      %li
+        = link_to 'Contacos', ""
+      %li
+        = link_to 'Conctos', ""
+      %li
+        = link_to 'Ctactos', ""
+      %li
+        = link_to 'Ctactos', ""
+
+
+#header
+  #logo
+    %h1
+      = link_to 'Listado de Hojas de Ruta', ""
+      %p
+        Diseñado por
+        = link_to 'SGTS', ""
+
+
+
+
+
+%table
+  %tr
+    %th FECHA DE SALIDA
+    %th ORIGEN
+    %th REMITENTE
+    %th NUMERO DE PAGINAS
+    %th REFERENCIA
+    %th
+    %th
+    %th
+
+
+  - @route_sheets.each do |route_sheet|
+    %tr
+      %td= route_sheet.out_date
+      %td= route_sheet.origin
+      %td= route_sheet.sender
+      %td= route_sheet.page_number
+      %td= route_sheet.reference
+      %td= link_to 'Mostrar', route_sheet
+      %td= link_to 'Editar', edit_route_sheet_path(route_sheet)
+      %td= link_to 'Eliminar', route_sheet, confirm: 'Estas seguro?', method: :delete
+
+%br
+
+= link_to 'Nueva Hoja de Ruta', new_route_sheet_path
