@@ -18,9 +18,11 @@
     = f.input :reference, :label => "Referencia :"
 
 
-  = f.semantic_fields_for :destinations do |d|
-    = d.inputs :name => "Destinatario" do
+  = f.inputs :for => :destinations do |d, i|
+    = d.inputs :name => "Destinatario ##{i}"  do
       = d.input :department, :as => :radio
       = d.input :observation
 
-  = f.actions
+  = f.actions :name => "Botones" do
+    =f.action :submit, :label => true
+    =f.action :cancel

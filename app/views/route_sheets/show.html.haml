@@ -1,0 +1,44 @@
+%p#notice=notice
+
+%p
+  %b ID:
+  = @route_sheet.id
+
+%p
+  %b FECHA DE SALIDA:
+  = @route_sheet.out_date
+
+%p
+  %b ORIGEN:
+  = @route_sheet.origin 
+
+
+%p
+  %b REMITENTE:
+  = @route_sheet.sender 
+
+
+%p
+  %b NUMERO DE PAGINAS:
+  = @route_sheet.page_number
+
+
+%p
+  %b REFERENCIA:
+  = @route_sheet.reference
+
+%div
+  - @route_sheet.destinations.each do |d|
+    %p
+      %b DESTINATARIO:
+      = d.department.name
+    %p
+      %b Observacion:
+      = d.observation
+
+
+
+
+= link_to 'Editar', edit_route_sheet_path(@route_sheet)
+|
+= link_to 'Ir Atras', route_sheets_path
