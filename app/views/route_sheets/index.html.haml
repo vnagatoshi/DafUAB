@@ -1,46 +1,17 @@
-#Swrapper
-  #menu
-    %ul
-      %li.current_page_item
-        = link_to 'Cont', ""
-      %li
-        = link_to 'Contact', ""
-      %li
-        = link_to 'Contacos', ""
-      %li
-        = link_to 'Conctos', ""
-      %li
-        = link_to 'Ctactos', ""
-      %li
-        = link_to 'Ctactos', ""
 
-
-#header
-  #logo
-    %h1
-      = link_to 'Listado de Hojas de Ruta', ""
-      %p
-        Diseñado por
-        = link_to 'SGTS', ""
-
-
-
-
-
-%table
+%table.tabla
   %tr
     %th FECHA DE SALIDA
     %th ORIGEN
     %th REMITENTE
     %th NUMERO DE PAGINAS
     %th REFERENCIA
-    %th
-    %th
-    %th
+    %th.opc OPCIONES
+
 
 
   - @route_sheets.each do |route_sheet|
-    %tr
+    %tr.datos
       %td= route_sheet.out_date
       %td= route_sheet.origin
       %td= route_sheet.sender

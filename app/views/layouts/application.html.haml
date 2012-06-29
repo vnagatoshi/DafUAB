@@ -1,0 +1,44 @@
+!!!
+%head
+  %meta{:charset => "utf-8"}
+  %meta{:author => "Marco Duran"}
+  %title Sistema DAF
+  = stylesheet_link_tag "application", :media => "all"
+  = javascript_include_tag "application"
+  = csrf_meta_tags
+  %link{:rel => "stylesheet", :type => "text/css", :href => "route_sheets.css" }
+#body
+  #wrapper
+    #menu
+      %ul
+        %li.current_page_item
+          = link_to 'Inicio', ""
+        %li
+          = link_to 'Hojas de Ruta', ""
+        %li
+          = link_to 'Departamentos', ""
+        %li
+          = link_to 'Contactos', ""
+
+
+
+  #header
+    #logo
+      %h1
+        Sistema de Seguimiento a la Documentación
+        %p
+          Diseñado por
+          = link_to 'SGTS', ""
+  #page
+    #page-bgtop
+      #page-bgbtm
+        #content
+          = yield
+
+  #footer
+    #p
+      Copyright (c) 2011 Sitename.com. All rights reserved. Design by
+      = link_to 'SGTS', ""
+
+
+

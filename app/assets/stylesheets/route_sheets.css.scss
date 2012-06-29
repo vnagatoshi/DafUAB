@@ -9,10 +9,10 @@ http://www.freecsstemplates.org
 Released for free under a Creative Commons Attribution 2.5 License
 */
 
-body {
+#body {
   margin: 0;
   padding: 0;
-  background: #033976 url(images/img01.jpg) repeat-x left top;
+  background: #033976 url(img01.jpg) repeat-x left top;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   color: #FFFFFF;
@@ -67,7 +67,7 @@ a:hover {
   height: 249px;
   margin: 0 auto;
   padding: 0px;
-  background: url(images/img03.jpg) no-repeat left top;
+  background: url(img03.jpg) no-repeat left top;
 }
 
 /* Logo */
@@ -78,19 +78,19 @@ a:hover {
   color: #000000;
 }
 
-#logo h1, #logo p {
+#logo>h1, #logo>p {
   margin: 0px;
   padding: 0px;
 }
 
-#logo h1 {
+#logo>h1 {
   padding-top: 120px;
   letter-spacing: -1px;
   text-transform: lowercase;
   font-size: 4.8em;
 }
 
-#logo p {
+#logo>p {
   margin: 0;
   padding: 0px 0 0 0px;
   font: normal 20px Georgia, "Times New Roman", Times, serif;
@@ -98,7 +98,7 @@ a:hover {
   color: #FFFFFF;
 }
 
-#logo a {
+#logo>a {
   border: none;
   background: none;
   text-decoration: none;
@@ -111,7 +111,7 @@ a:hover {
   width: 280px;
   height: 40px;
   padding: 0px 0px 0px 0px;
-  background: url(images/img08.jpg) no-repeat 20px 11px;
+  background: url(img08.jpg) no-repeat 20px 11px;
 }
 
 #search form {
@@ -152,7 +152,7 @@ a:hover {
   height: 61px;
   margin: 0px auto;
   padding: 90px 0px 0px 0px;
-  background: url(images/img02.jpg) no-repeat left top;
+  background: url(img02.jpg) no-repeat left top;
 }
 
 #menu ul {
@@ -196,16 +196,16 @@ a:hover {
   width: 980px;
   margin: 0px auto;
   padding: 0px 0px 0px 0px;
-  background: url(images/img06.jpg) repeat-y left top;
+  background: url(img06.jpg) repeat-y left top;
 }
 
 #page-bgtop {
-  background: url(images/img04.jpg) no-repeat left top;
+  background: url(img04.jpg) no-repeat left top;
 }
 
 #page-bgbtm {
   padding: 30px 10px 0px 40px;
-  background: url(images/img05.jpg) no-repeat left bottom;
+  /*background: url(img05.jpg) no-repeat left bottom;*/
 }
 
 /* Content */
@@ -218,7 +218,7 @@ a:hover {
 
 .post {
   margin-bottom: 15px;
-  background: url(images/img10.gif) repeat-x left bottom;
+  background: url(img10.gif) repeat-x left bottom;
 }
 
 .post .title {
@@ -268,73 +268,6 @@ a:hover {
 
 /* Sidebar */
 
-#sidebar {
-  float: right;
-  width: 280px;
-  margin: 0px;
-  padding: 0px 0px 0px 0px;
-}
-
-#sidebar ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-#sidebar li {
-  margin: 0px 0px 20px 0px;
-  padding: 0;
-}
-
-#sidebar li ul {
-  margin: 0px 0px 0px 0px;
-  padding-bottom: 30px;
-}
-
-#sidebar li li {
-  line-height: 35px;
-  margin: 0px 30px;
-  border-left: none;
-  background: url(images/img10.gif) repeat-x left bottom;
-}
-
-#sidebar li li a {
-  padding-left: 20px;
-  background: url(images/img09.jpg) no-repeat left 5px;
-}
-
-#sidebar li li span {
-  display: block;
-  margin-top: -20px;
-  padding: 0;
-  font-size: 11px;
-  font-style: italic;
-}
-
-#sidebar h2 {
-  height: 38px;
-  padding-left: 30px;
-  letter-spacing: -.5px;
-  font-size: 1.8em;
-  color: #FFFFFF;
-}
-
-#sidebar p {
-  margin: 0 0px;
-  padding: 0px 30px 20px 30px;
-  text-align: justify;
-}
-
-#sidebar a {
-  border: none;
-  color: #7AA7DE;
-}
-
-#sidebar a:hover {
-  text-decoration: underline;
-  color: #7AA7DE;
-}
-
 /* Calendar */
 
 #calendar {
@@ -364,10 +297,10 @@ a:hover {
   margin: 0px auto 30px auto;
   padding: 0px;
   font-family: Arial, Helvetica, sans-serif;
-  background: url(images/img07.jpg) no-repeat left top;
+  background: url(img07.jpg) no-repeat left top;
 }
 
-#footer p {
+#footer>p {
   margin: 0;
   padding-top: 30px;
   line-height: normal;
@@ -377,6 +310,49 @@ a:hover {
   color: #3185EB;
 }
 
-#footer a {
+#footer>a {
   color: #3185EB;
+}
+
+/* tabla de index */
+
+.tabla th {
+padding: 5px;
+font-size: 12px;
+background-color: #83aec0;
+background-image: url(fondo_th.png);
+background-repeat: repeat-x;
+color: #FFFFFF;
+border-right-width: 1px;
+border-bottom-width: 1px;
+border-right-style: solid;
+border-bottom-style: solid;
+border-right-color: #558FA6;
+border-bottom-color: #558FA6;
+font-family: “Trebuchet MS”, Arial;
+text-transform: uppercase;
+}
+
+.tabla .datos {
+font-size: 12px;
+font-weight:bold;
+background-color: #e2ebef;
+background-image: url(fondo_tr01.png);
+background-repeat: repeat-x;
+color: #34484E;
+font-family: “Trebuchet MS”, Arial;
+}
+.tabla .datos td {
+padding: 5px;
+border-right-width: 1px;
+border-bottom-width: 1px;
+border-right-style: solid;
+border-bottom-style: solid;
+border-right-color: #A4C4D0;
+border-bottom-color: #A4C4D0;
+text-align:right;
+}
+
+.tabla .opc{
+colspan:3;
 }
